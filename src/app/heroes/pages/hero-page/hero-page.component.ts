@@ -29,12 +29,14 @@ export class HeroPageComponent implements OnInit {
         if (!hero) return this.router.navigate(['/heroes/list']);
 
         this.hero = hero;
-        console.log({ hero });
 
         return;
 
       })
   }
 
+  goBack(): void {
+    this.router.navigateByUrl("heroes/list")
+  }
 
 }
